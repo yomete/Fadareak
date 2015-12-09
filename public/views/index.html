@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="fadareakApp" lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fadareak Photography</title>
+	<meta name="description" content="Fadareak Photography Portfolio" />
+	<meta name="keywords" content="photography, event, fadareak, abuja, balogun, ibukun" />
+	<meta name="author" content="Yomi Eluwande" />
+	<link rel="shortcut icon" href="assets/img/fadareak.ico">
+
+	<!--CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/chocolat.css" />
+    <script src="assets/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+    <header class="index_header">
+
+        <div class="logoheader">
+            <a ui-sref="/"><img width="150" src="assets/img/fd.png"></a>
+        </div>
+
+        <div></div>
+        <a class="hamburger" id="trigger-overlay"><img class="hamburger_img" src="assets/img/menu.png"></a>
+
+        <!-- open/close -->
+        <div class="overlay overlay-hugeinc">
+            <button type="button" class="overlay-close">Close</button>
+            <nav>
+                <ul>
+                    <li><a ui-sref="/">Home</a></li>
+                    <li><a ui-sref="about" >About</a></li>
+                    <li><a ui-sref="work">Work</a></li>
+                    <li><a ui-sref="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+	<div class="container" ng-controller="chocolatCtrl">
+		<div ui-view></div>	
+	</div>
+
+	<!-- Footer-->
+	<div class="footer">
+		<div class="footer_text">
+			<p>&copy; 2015. Ibukun Balogun</p>
+            <p>Developed by <a target="_blank" href="http://www.fusion.com.ng">Fusion</a></p>
+            <p>Share this page</p>
+		</div>
+	</div>
+	<!--JS -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/demo1.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.chocolat.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="assets/js/ng-chocolat.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+
+
+</body>
+</html>
