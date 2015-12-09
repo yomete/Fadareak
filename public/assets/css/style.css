@@ -101,7 +101,7 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 
 .work_img { -webkit-filter: grayscale(100%); }
 
-.album .work_img:hover { -webkit-filter: grayscale(0%) }
+.album .work_img:hover { -webkit-filter: grayscale(0%); }
 
 .work_img1 { height: 400px; width: 100%;}
 .work_img2 { height: 400px; width: 100%;}
@@ -127,13 +127,10 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 /*.wa { margin-top: 30px;}*/
 /*.wa_div .wa_img:hover {-webkit-filter: grayscale(0%);}*/
 /*.wa_img { height: 500px; width: 500px; object-fit: cover; -webkit-filter: grayscale(0%);}*/
-#container {
-	width: 1200px;
-	margin: 0 auto;
-}
+
 
 .item {
-  width: 370px;
+  width: 350px;
   margin: 10px;
   float: left;
 
