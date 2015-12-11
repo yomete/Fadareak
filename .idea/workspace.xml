@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9618d6d-c1a4-4e3c-8abf-e9a59e9c2d04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/wallop--fade.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/wallop--slide.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/wallop.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/55.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/sliders/T1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/Wallop.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/angular-carousel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/angular-touch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/demo1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/slick.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/work-home.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/about.html" afterPath="$PROJECT_DIR$/public/views/pages/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/app.js" afterPath="$PROJECT_DIR$/public/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/contact.html" afterPath="$PROJECT_DIR$/public/views/pages/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/index.html" afterPath="$PROJECT_DIR$/public/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/style.css" afterPath="$PROJECT_DIR$/public/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/work-art.html" afterPath="$PROJECT_DIR$/public/views/pages/work-art.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/work-concerts.html" afterPath="$PROJECT_DIR$/public/views/pages/work-concerts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/work-events.html" afterPath="$PROJECT_DIR$/public/views/pages/work-events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/work-potraitart.html" afterPath="$PROJECT_DIR$/public/views/pages/work-potraitart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/pages/work.html" afterPath="$PROJECT_DIR$/public/views/pages/work.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a9618d6d-c1a4-4e3c-8abf-e9a59e9c2d04" name="Default" comment="" />
     <ignored path="fadaapp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
