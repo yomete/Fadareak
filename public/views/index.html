@@ -19,6 +19,7 @@
 
 </head>
 <body>
+
     <header class="index_header">
 
         <div class="logoheader">
@@ -43,21 +44,23 @@
 
     </header>
 
-	<div class="container" ng-controller="chocolatCtrl">
-		<div ui-view></div>	
-	</div>
-
-	<!-- Footer-->
-	<div class="footer">
-		<div class="footer_text">
-			<p>&copy; 2015. Ibukun Balogun</p>
-            <p>Developed by <a target="_blank" href="http://www.fusion.com.ng">Fusion</a></p>
-            <p>Share this page</p>
+	<div  ng-controller="chocolatCtrl">
+		<div ui-view>
+			<ul class="cb-slideshow">
+				<li><span>Image 01</span><div></div></li>
+				<li><span>Image 02</span><div>></div></li>
+				<li><span>Image 03</span><div></div></li>
+				<li><span>Image 04</span><div></div></li>
+				<li><span>Image 05</span><div></div></li>
+				<li><span>Image 06</span><div></div></li>
+			</ul>
+			<div class="border"></div>
 		</div>
 	</div>
+
+
 	<!--JS -->
     <script src="assets/js/classie.js"></script>
-    <script src="assets/js/demo1.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
@@ -66,7 +69,6 @@
 	<script type="text/javascript" src="assets/js/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="assets/js/ng-chocolat.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
-
 
 
 </body>

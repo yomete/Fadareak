@@ -95,11 +95,6 @@
 
 			// nested states
 			//each of these section will have their own views
-			// url will be nested work/home
-			.state('work.home', {
-				url: '/home',
-				templateUrl: 'views/pages/work-home.html'
-			})
 
 			.state('work.art', {
 				url: '/art',
@@ -121,8 +116,32 @@
 				templateUrl: 'views/pages/work-potraitart.html'
 			});
 	});
+
+	fadareakApp.controller('carouselController', function($scope) {
+		$scope.images = [
+			{
+				src: "/assets/img/sliders/11.png"
+			},
+			{
+				src: "/assets/img/sliders/2.jpg"
+			},
+			{
+				src: "/assets/img/sliders/33.png"
+			},
+			{
+				src: "/assets/img/sliders/44.png"
+			},
+			{
+				src: "/assets/img/sliders/55.png"
+			},
+			{
+				src: "/assets/img/sliders/6.png"
+			}
+		]
+	});
 })();
 
+/*Masonry JS*/
 (function(){
 	var $container = $('#container');
 	$container.imagesLoaded(function(){
@@ -131,4 +150,46 @@
 	    columnWidth : 370
 	  });
 });
+})();
+
+/*Full page CSS menu JS*/
+(function() {
+	var triggerBttn = document.getElementById( 'trigger-overlay' ),
+		overlay = document.querySelector( 'div.overlay' ),
+		closeBttn = overlay.querySelector( 'button.overlay-close' );
+	transEndEventNames = {
+		'WebkitTransition': 'webkitTransitionEnd',
+		'MozTransition': 'transitionend',
+		'OTransition': 'oTransitionEnd',
+		'msTransition': 'MSTransitionEnd',
+		'transition': 'transitionend'
+	},
+		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+		support = { transitions : Modernizr.csstransitions };
+
+	function toggleOverlay() {
+		if( classie.has( overlay, 'open' ) ) {
+			classie.remove( overlay, 'open' );
+			classie.add( overlay, 'close' );
+			var onEndTransitionFn = function( ev ) {
+				if( support.transitions ) {
+					if( ev.propertyName !== 'visibility' ) return;
+					this.removeEventListener( transEndEventName, onEndTransitionFn );
+				}
+				classie.remove( overlay, 'close' );
+			};
+			if( support.transitions ) {
+				overlay.addEventListener( transEndEventName, onEndTransitionFn );
+			}
+			else {
+				onEndTransitionFn();
+			}
+		}
+		else if( !classie.has( overlay, 'close' ) ) {
+			classie.add( overlay, 'open' );
+		}
+	}
+
+	triggerBttn.addEventListener( 'click', toggleOverlay );
+	closeBttn.addEventListener( 'click', toggleOverlay );
 })();
