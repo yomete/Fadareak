@@ -156,11 +156,6 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 .work_albums .album:hover h2 { bottom: 10px; opacity: 1; }
 
 
-/*.wa { margin-top: 30px;}*/
-/*.wa_div .wa_img:hover {-webkit-filter: grayscale(0%);}*/
-/*.wa_img { height: 500px; width: 500px; object-fit: cover; -webkit-filter: grayscale(0%);}*/
-
-
 .item {
   width: 350px;
   margin: 10px;
@@ -168,18 +163,16 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 
 }
 
+/*Contact page*/
+.contact {background-color:rgb(241, 27, 32);margin-bottom: 20px; padding-bottom: 20px; }
+.contact_title h3 { font-size: 40px;margin-bottom: 50px;margin-top: 50px; text-align: center; color: white;}
+.contact_form {}
+.contact_details_p {color: #ffffff;}
+.contact_headers{color: white; font-size: 20px;}
+input {background-color:rgb(241, 27, 32) !important; color: white !important; border-radius: 0px !important;border: 1px solid #fff !important;}
+textarea {background-color:rgb(241, 27, 32) !important; color: white !important; border-radius: 0px !important;}
+label {display: none !important;}
 
-/*.wc { margin-top: 30px;}*/
-/*.wc_div .wc_img:hover {-webkit-filter: grayscale(0%)}*/
-/*.wc_img { height: 500px; width: 500px; object-fit: cover; -webkit-filter: grayscale(0%);}
-
-.we { margin-top: 30px;}
-/*.we_div .we_img:hover{-webkit-filter: grayscale(0%)}*/
-/*.we_img { height: 500px; width: 500px; object-fit: cover; -webkit-filter: grayscale(0%);}
-*/
-/*.wpa { margin-top: 30px;}*/
-/*.wpa_div .wpa_img:hover {-webkit-filter: grayscale(0%)}*/
-/*.wpa_img { height: 500px; width: 500px; object-fit: cover; -webkit-filter: grayscale(0%);}*/
 
 /*Footer page*/
 .footer{ border-top: 2px solid rgb(249, 154, 0) ;}

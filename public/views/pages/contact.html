@@ -1,4 +1,44 @@
-contact
+<div class="contact">
+    <div class="contact_title col-xs-12"><h3>We are here when you need us.<br>Stop by or just drop a note.</h3></div>
+        <div class="container">
+            <div class="row">
+                <div class="callus col-md-4 col-xs-12">
+                    <p class="contact_headers">Call Us</p>
+                </div>
+                <div class="contact_form col-md-4 col-xs-12">
+                    <p class="contact_headers">Leave us a note</p>
+                    <div id="form-messages"></div>
+
+                    <form id="ajax-contact" method="post" action="assets/includes/mailer.php" class="contact_form_form">
+
+                        <div class="field form-group input input_name">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" class = "form-control" name="name" placeholder="Name" required>
+                        </div>
+
+                        <div class="field form-group input input_email">
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" class = "form-control" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="field form-group input ">
+                            <label for="message">Message:</label>
+                            <textarea id="message" class="form-control" rows="5" name="message" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="field">
+                            <input class="contact_btn btn btn-default transition" type="submit" value="SUBMIT">
+                        </div>
+                    </form>
+                </div>
+                <div class="contact_details col-md-4 col-xs-12">
+                    <p class="contact_headers">Come in for a drink</p>
+                    <p class="contact_details_p">Sunnyvale Estates,<br>Abuja.</p>
+                </div>
+            </div>
+        </div>
+
+</div>
 <!-- Footer-->
 <div class="footer">
     <div class="footer_text">
