@@ -1,6 +1,6 @@
 
 (function(){
-	var fadareakApp = angular.module('fadareakApp', ['ui.router', 'chocolat']);
+	var fadareakApp = angular.module('fadareakApp', [ 'ngAnimate', 'ui.router', 'chocolat']);
 
 	fadareakApp.controller('chocolatCtrl', ['$scope', function($scope) {
 		
@@ -117,28 +117,6 @@
 			});
 	});
 
-	fadareakApp.controller('carouselController', function($scope) {
-		$scope.images = [
-			{
-				src: "/assets/img/sliders/11.png"
-			},
-			{
-				src: "/assets/img/sliders/2.jpg"
-			},
-			{
-				src: "/assets/img/sliders/33.png"
-			},
-			{
-				src: "/assets/img/sliders/44.png"
-			},
-			{
-				src: "/assets/img/sliders/55.png"
-			},
-			{
-				src: "/assets/img/sliders/6.png"
-			}
-		]
-	});
 })();
 
 /*Masonry JS*/

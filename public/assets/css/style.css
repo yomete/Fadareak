@@ -100,6 +100,32 @@ a:focus{ color: rgb(241, 27, 32) !important;}
     top: 10px;
 }
 
+.text {  text-align: center;  color: white;  }
+
+.introtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_span {font-size: 1.6em;letter-spacing: 0.2em;}
+.text.slider_span:before,.text.slider_span:after {content: " ";  display: inline-block;  height: 2px;  margin: 3px 15px;  width: 27px; background-color: white;}
+.text.slider_span:before,.text.slider_span:after {margin-left: 0;}
+
+.slider_h1 {margin: 30px 0 35px 0; font-size: 4em; font-weight: 400; letter-spacing: .1em}
+
+.explore {
+    background-color: transparent;
+    color: white;
+    letter-spacing: .1em;
+    border-color: white;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+a.explore:hover {background-color: white; color: black; border-color: white;}
 #bg {
     position: fixed;
     top: -50%;
@@ -169,9 +195,15 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 .contact_form {}
 .contact_details_p {color: #ffffff;}
 .contact_headers{color: white; font-size: 20px;}
+.contact_call {color: white; margin-bottom: 30px;}
+a.contact_call:hover{color: white;}
 input {background-color:rgb(241, 27, 32) !important; color: white !important; border-radius: 0px !important;border: 1px solid #fff !important;}
 textarea {background-color:rgb(241, 27, 32) !important; color: white !important; border-radius: 0px !important;}
 label {display: none !important;}
+.s_link {
+    margin-right: 5%;
+}
+
 
 
 /*Footer page*/
@@ -186,7 +218,7 @@ label {display: none !important;}
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.77);
 }
 
 /* Overlay closing cross */
@@ -294,6 +326,12 @@ label {display: none !important;}
     }
 }
 
+h6.copyrights {
+    color: white;
+    font-family: 'montserrat';
+    text-transform: uppercase;
+    font-size: .25em;
+}
 
 /*Background Slider*/
 html,body {
@@ -523,4 +561,45 @@ ol,ul {
 }
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
+}
+
+/*Animate.css*/
+[ui-view].ng-enter, [ui-view].ng-leave {
+
+    left: 0;
+    right: 0;
+    -webkit-transition:all 1000ms ease-in-out;
+    transition:all 1000ms ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+}
+
+[ui-view].ng-leave {
+    opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+}
+
+/*Media queries*/
+@media screen and (max-width: 991px) {
+    p.contact_headers {
+        margin-top: 20px;
+    }
+
+    .contact_form {
+        margin-top: 30px;
+    }
+
+    .contact_details {
+        margin-top: 30px;
+
+    }
 }
