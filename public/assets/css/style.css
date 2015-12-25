@@ -189,6 +189,15 @@ a.work_link:hover {border-bottom: 2px solid rgb(249, 154, 0);}
 
 }
 
+/*About page*/
+.about_content {margin-bottom: 4%}
+.about_content p {
+    text-align: justify;
+    font-size: 1.1em;
+}
+.about_p {margin-top: 15px;  margin-bottom: 15px;}
+.fadareak { border-bottom: 2px solid rgb(0, 0, 0); }
+
 /*Contact page*/
 .contact {background-color:rgb(241, 27, 32);margin-bottom: 20px; padding-bottom: 20px; }
 .contact_title h3 { font-size: 40px;margin-bottom: 50px;margin-top: 50px; text-align: center; color: white;}
