@@ -1,1 +1,225 @@
-!function(){var e=angular.module("fadareakApp",["ngAnimate","ui.router","chocolat"]);e.controller("chocolatCtrl",["$scope",function(e){e.configInScope={loop:!0,imageSize:"cover"},e.configOnScope={loop:!0,imageSize:"contain"},e.instance={},e.open=function(){console.log("open start");var t=e.instance.api().open();t.done(function(){console.log("open done")})},e.close=function(){console.log("close start");var t=e.instance.api().close();t.done(function(){console.log("close done")})},e.prev=function(){console.log("prev start");var t=e.instance.api().prev();t.done(function(){console.log("prev done")})},e.next=function(){console.log("next start");var t=e.instance.api().next();t.done(function(){console.log("next done")})},e.cover=function(){console.log("cover mode start"),e.instance.api().set("imageSize","cover");var t=e.instance.api().place();t.done(function(){console.log("cover mode done")})},e.contain=function(){console.log("contain mode start"),e.instance.api().set("imageSize","contain");var t=e.instance.api().place();t.done(function(){console.log("contain mode done")})}}]),e.config(function(e,t){t.otherwise("/home"),e.state("/",{url:"/home",templateUrl:"views/pages/home.html"}).state("about",{url:"/about",templateUrl:"views/pages/about.html"}).state("contact",{url:"/contact",templateUrl:"views/pages/contact.html"}).state("work",{url:"/work",templateUrl:"views/pages/work.html"}).state("work.art",{url:"/art",templateUrl:"views/pages/work-art.html"}).state("work.concert",{url:"/concert",templateUrl:"views/pages/work-concerts.html"}).state("work.event",{url:"/event",templateUrl:"views/pages/work-events.html"}).state("work.potraitart",{url:"/potraitart",templateUrl:"views/pages/work-potraitart.html"})})}(),function(){var e=$("#container");e.imagesLoaded(function(){e.masonry({itemSelector:".item",columnWidth:370})})}(),function(){function e(){if(classie.has(n,"open")){classie.remove(n,"open"),classie.add(n,"close");var e=function(t){if(support.transitions){if("visibility"!==t.propertyName)return;this.removeEventListener(transEndEventName,e)}classie.remove(n,"close")};support.transitions?n.addEventListener(transEndEventName,e):e()}else classie.has(n,"close")||classie.add(n,"open")}var t=document.getElementById("trigger-overlay"),n=document.querySelector("div.overlay"),o=n.querySelector("button.overlay-close");transEndEventNames={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd",msTransition:"MSTransitionEnd",transition:"transitionend"},transEndEventName=transEndEventNames[Modernizr.prefixed("transition")],support={transitions:Modernizr.csstransitions},t.addEventListener("click",e),o.addEventListener("click",e)}(),$(function(){var e=$("#ajax-contact"),t=$("#form-messages");$(e).submit(function(n){n.preventDefault();var o=$(e).serialize();$.ajax({type:"POST",url:$(e).attr("action"),data:o}).done(function(e){$(t).removeClass("error"),$(t).addClass("success"),$(t).text(e),$("#name").val(""),$("#email").val(""),$("#message").val("")}).fail(function(e){$(t).removeClass("success"),$(t).addClass("error"),""!==e.responseText?$(t).text(e.responseText):$(t).text("Oops! An error occured and your message could not be sent.")})})});
+
+(function(){
+	var fadareakApp = angular.module('fadareakApp', [ 'ngAnimate', 'ui.router', 'chocolat']);
+
+	fadareakApp.controller('chocolatCtrl', ['$scope', function($scope) {
+		
+		$scope.configInScope = { loop: true, imageSize: 'cover' }
+
+		$scope.configOnScope = { loop: true, imageSize: 'contain' }
+
+		$scope.instance = {};
+
+		$scope.open = function() {
+	        console.log('open start');
+	        var def = $scope.instance.api().open();
+	        def.done(function() {
+	            console.log('open done');
+	        });
+	    };
+
+	    $scope.close = function() {
+	        console.log('close start');
+	        var def = $scope.instance.api().close();
+
+	        def.done(function(){
+	            console.log('close done');
+	        });
+	    };
+
+
+	    $scope.prev = function() {
+	        console.log('prev start');
+	        var def = $scope.instance.api().prev();
+
+	        def.done(function() {
+	            console.log('prev done');
+	        });
+	    };
+
+	    $scope.next = function() {
+	        console.log('next start');
+	        var def = $scope.instance.api().next();
+
+	        def.done(function() {
+	            console.log('next done');
+	        });
+	    };
+
+	    $scope.cover = function() {
+	        console.log('cover mode start');
+	        $scope.instance.api().set('imageSize', 'cover');
+	        var def = $scope.instance.api().place();
+
+	        def.done(function() {
+	            console.log('cover mode done');
+	        })
+	    };
+
+	    $scope.contain = function() {
+	        console.log('contain mode start');
+	        $scope.instance.api().set('imageSize', 'contain');
+	        var def = $scope.instance.api().place();
+
+	        def.done(function() {
+	            console.log('contain mode done');
+	        })
+	    };
+	}]);
+
+	fadareakApp.config(function($stateProvider, $urlRouterProvider) {
+		
+		$urlRouterProvider.otherwise('/home');
+
+		$stateProvider
+
+			.state('/', {
+				url: '/home',
+				templateUrl: 'views/pages/home.html'
+			})
+
+			.state('about', {
+				url: '/about',
+				templateUrl: 'views/pages/about.html'
+			})
+
+			.state('contact', {
+				url: '/contact',
+				templateUrl: 'views/pages/contact.html'
+			})
+
+			.state('work', {
+				url: '/work',
+				templateUrl: 'views/pages/work.html'
+			})
+
+			// nested states
+			//each of these section will have their own views
+
+			.state('work.art', {
+				url: '/art',
+				templateUrl: 'views/pages/work-art.html'
+			})
+
+			.state('work.concert', {
+				url: '/concert',
+				templateUrl: 'views/pages/work-concerts.html'
+			})
+
+			.state('work.event', {
+				url: '/event',
+				templateUrl: 'views/pages/work-events.html'
+			})
+
+			.state('work.potraitart', {
+				url: '/potraitart',
+				templateUrl: 'views/pages/work-potraitart.html'
+			});
+	});
+
+})();
+
+/*Masonry JS*/
+(function(){
+	var $container = $('#container');
+	$container.imagesLoaded(function(){
+	  $container.masonry({
+	    itemSelector : '.item',
+	    columnWidth : 370
+	  });
+});
+})();
+
+/*Full page CSS menu JS*/
+(function() {
+	var triggerBttn = document.getElementById( 'trigger-overlay' ),
+		overlay = document.querySelector( 'div.overlay' ),
+		closeBttn = overlay.querySelector( 'button.overlay-close' );
+	transEndEventNames = {
+		'WebkitTransition': 'webkitTransitionEnd',
+		'MozTransition': 'transitionend',
+		'OTransition': 'oTransitionEnd',
+		'msTransition': 'MSTransitionEnd',
+		'transition': 'transitionend'
+	},
+		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+		support = { transitions : Modernizr.csstransitions };
+
+	function toggleOverlay() {
+		if( classie.has( overlay, 'open' ) ) {
+			classie.remove( overlay, 'open' );
+			classie.add( overlay, 'close' );
+			var onEndTransitionFn = function( ev ) {
+				if( support.transitions ) {
+					if( ev.propertyName !== 'visibility' ) return;
+					this.removeEventListener( transEndEventName, onEndTransitionFn );
+				}
+				classie.remove( overlay, 'close' );
+			};
+			if( support.transitions ) {
+				overlay.addEventListener( transEndEventName, onEndTransitionFn );
+			}
+			else {
+				onEndTransitionFn();
+			}
+		}
+		else if( !classie.has( overlay, 'close' ) ) {
+			classie.add( overlay, 'open' );
+		}
+	}
+
+	triggerBttn.addEventListener( 'click', toggleOverlay );
+	closeBttn.addEventListener( 'click', toggleOverlay );
+})();
+
+$(function() {
+
+	// Get the form.
+	var form = $('#ajax-contact');
+
+	// Get the messages div.
+	var formMessages = $('#form-messages');
+
+	// Set up an event listener for the contact form.
+	$(form).submit(function(e) {
+		// Stop the browser from submitting the form.
+		e.preventDefault();
+
+		// Serialize the form data.
+		var formData = $(form).serialize();
+
+		// Submit the form using AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		})
+			.done(function(response) {
+				// Make sure that the formMessages div has the 'success' class.
+				$(formMessages).removeClass('error');
+				$(formMessages).addClass('success');
+
+				// Set the message text.
+				$(formMessages).text(response);
+
+				// Clear the form.
+				$('#name').val('');
+				$('#email').val('');
+				$('#message').val('');
+			})
+			.fail(function(data) {
+				// Make sure that the formMessages div has the 'error' class.
+				$(formMessages).removeClass('success');
+				$(formMessages).addClass('error');
+
+				// Set the message text.
+				if (data.responseText !== '') {
+					$(formMessages).text(data.responseText);
+				} else {
+					$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				}
+			});
+
+	});
+
+});
